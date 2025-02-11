@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid transparent;
+}
+
+::selection {
+    background-color:red;
+    color: #E5E0C3    
+}
+
+body {
+    background-color: #E5E0C3;
+    font-family: "DM Sans", serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: red;
+}
+
+h1 {
+    font-family: "VT323", serif;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: inherit;
+    margin-bottom: 1.5rem;
+}
+
+header, section, footer {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    padding: 2.5rem 1rem 0rem;
+}
+
+footer {
+    padding: 0rem 1rem 2.5rem;
+}
+
+section {
+    padding: 5rem 2rem;
+    gap: 7rem;
+}
+
+section div {
+    flex: 1 1 0;
+}
+
+div.text {
+    max-width: 25rem;
+}
+
+div.image {
+    max-width: 18rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.animate {
+    animation-duration: .75s;
+    animation-name: pop-in;
+    animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(.5, .5);
+    }
+
+    33% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+
+    67% {
+        transform: scale(.75, .75);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+@media screen and (max-width: 927px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    section {
+        gap: 2rem;
+        padding: 2.5rem 1rem;
+    }
+
+    footer {
+        padding: 0rem 1rem 1.25rem;
+    }
+
+    header {
+        padding: 1.25rem 1rem 0rem;
+    }
+}
